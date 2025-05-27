@@ -1,0 +1,35 @@
+body {
+    transition-delay: unset;
+    margin: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid;
+    box-shadow: 0 0 4px black;
+    text-align: center;
+}
+th, td {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #000; 
+    padding: 8px;
+}
+td{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+    background-color:navy;
+    color: white;
+}
+.color-blue1 {
+    background-color: lightblue;
+}
+.color-blue2 {
+    background-color: blue;
+}
+tbody tr:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
