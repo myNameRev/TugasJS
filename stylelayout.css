@@ -1,0 +1,319 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('sekaten.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;      
+    background-position:center; 
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.menu-icon {
+    font-size: 30px;
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #0044;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+}
+
+.sidebar {
+    font-family: 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color:#e47d00 ;
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.sidebar nav a:hover {
+    background-color: #575757;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+#menu-toggle:checked ~ .overlay {
+    width: 100%;
+    visibility: visible;
+}
+
+main {
+    padding: 80px 20px;
+}
+
+.menu-icon {
+    width: 25px;
+    height: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 3px;
+}
+  
+.bar {
+    height: 3px;
+}
+
+header {
+    background-color: #e47d00;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin: 10px 0;
+}
+nav ul li a{
+    display: inline;
+    margin: 10%;
+    color: white;
+    height: auto;
+}
+.topnav {
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+.event-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    margin-left: 70;
+}
+
+.event-details img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.event-card {
+    display: flex;
+    gap: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+  
+.event-image img {
+    display: flex;
+    width: 420px;
+    border-radius: 12px;
+}
+  
+.event-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.event-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.event-info p {
+    margin: 6px 0;
+    font-size: 16px;
+}
+  
+.event-info span {
+    margin-right: 6px;
+}
+  
+.organizer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.organizer img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+  
+.organizer-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #777; 
+}
+  
+.organizer-text strong {
+    font-size: 15px;
+}
+  
+
+.description, .terms {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    di
+}
+
+button.buy-ticket {
+    background-color: #e47d00;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 15px;
+    cursor:pointer;
+    position:static;
+    display: block;
+    margin-top: 30px;
+    float: right;
+}
+
+button.buy-ticket:hover {
+    background-color: #57370f;
+}
+
+.organizer-text{
+    display: inline;
+    font-size:medium;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.footer {
+    background-color:#e47d00;
+    padding: 20px 0;
+    border-radius: 15px;
+    text-align: center;
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+  
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    padding: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer .footer-content p {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .event-image img {
+        width: 90%;
+    }
+
+    .event-info h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .event-info p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .organizer {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .organizer img {
+        margin-bottom: 10px;
+    }
+
+    button.buy-ticket {
+        width: 100%;
+        padding: 12px;
+        float: none;
+        margin: 20px auto 0;
+    }
+
+    .event-details {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    input[type="text"] {
+        width: 95%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .menu-icon {
+        top: 5px;
+        left: 5px;
+        padding: 8px;
+    }
+}
