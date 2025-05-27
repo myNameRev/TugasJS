@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Struktur Perulangan For</title>
+    <script>
+        function validasi(form){
+        if (form.user.value == ""){
+            alert("Anda belum mengisikan Username?");
+            form.user.focus(); }
+        if (form.mail.value == ""){
+            alert("Anda belum mengisikan email?");
+            form.mail.focus();} 
+        if (form.pass.value == ""){
+            alert("Anda belum mengisikan Password?");
+            form.pass.focus(); }
+        if (form.rtpass.value != form.pass.value){
+            alert("password yang anda isikan tidak cocok !");
+            form.rtpass.focus();  }
+        if (form.birthday.value == ""){
+            alert("Anda belum mengisikan birthday");
+            form.birthday.focus();
+             return (false); 
+            }
+            return (true);
+        }    
+    </script>
+</head>
+<body>
+<form method=POST action="#" onSubmit="return validasi(this)">
+<table>
+    <tr>
+        <th colspan="3">Login Area</th>
+    </tr>
+    <tr>
+        <td>Username</td>
+        <td>:</td>
+        <td><input type="text" name="user" /></td>
+    </tr>
+     <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td><input type="email" name="mail" /></td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>:</td>
+        <td><input type="password" name="pass" /></td>
+    </tr>
+    <tr>
+        <td>Retype Password</td>
+        <td>:</td>
+        <td><input type="password" name="rtpass" /></td>
+    </tr>
+    
+    <tr>
+        <td>birthday</td>
+        <td>:</td>
+        <td><input type="date" name="birthday" /></td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Kirim">
+            </input></td>    
+        <td></td>
+        <td><input type="reset" value="Batal"/></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
